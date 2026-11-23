@@ -331,7 +331,7 @@ footer{border-top:1px solid var(--border);padding:60px 40px;max-width:1100px;mar
       <div class="doc-type">Resume / PDF</div>
       <h3>My experience, at a glance.</h3>
       <p>A one-page overview of professional work, education, skills and selected projects.</p>
-      <a href="https://udeeshabansal.github.io/Portfolio/Udeesha_Bansal_Resume.pdf" target="_blank">Download resume &rarr;</a>
+      <a href="Udeesha_Bansal.pdf" target="_blank">Download resume &rarr;</a>
     </div>
     <div class="doc-card">
       <div class="doc-type">Academic Reference / PDF</div>

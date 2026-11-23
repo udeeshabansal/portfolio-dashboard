@@ -1,5 +1,3 @@
-# portfolio-dashboard
-[portfolio.html](https://github.com/user-attachments/files/35258572/portfolio.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,164 +6,340 @@
 <title>Udeesha Bansal | Strategy · Analytics · Decisions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0C0C0C;--bg-card:#161616;--bg-ev:#1C1C1C;--fg:#F0EFEB;--fg-mid:#A8A8A2;--fg-dim:#666660;--accent:#E8503A;--accent-glow:rgba(232,80,58,.12);--green:#3CB88C;--green-dim:rgba(60,184,140,.12);--border:#2A2A28;--display:'Space Grotesk',system-ui,sans-serif;--body:'Newsreader',Georgia,serif;color-scheme:dark}
-@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#F8F7F4;--bg-card:#FFF;--bg-ev:#F0EFEB;--fg:#1A1A18;--fg-mid:#5A5A56;--fg-dim:#9A9A94;--accent:#D04030;--accent-glow:rgba(208,64,48,.08);--green:#1B8A60;--green-dim:rgba(27,138,96,.08);--border:#E0DFDA;color-scheme:light}}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{font-family:var(--body);background:var(--bg);color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d1117;--card:#161b22;--card-border:#21262d;
+  --fg:#e6edf3;--fg-mid:#8b949e;--fg-dim:#484f58;
+  --accent:#c9a84c;--accent-glow:rgba(201,168,76,.12);
+  --teal:#58a6b0;--teal-glow:rgba(88,166,176,.1);
+  --sans:'Inter',system-ui,sans-serif;
+  --display:'Playfair Display',Georgia,serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--fg);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.w{max-width:1060px;margin:0 auto;padding:0 28px}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--bg);border-bottom:1px solid var(--border);padding:14px 0}
-nav .w{display:flex;justify-content:space-between;align-items:center}
-.nn{font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:-.02em;color:var(--fg)}
-.nl{display:flex;gap:24px}.nl a{font-family:var(--display);font-size:.82rem;font-weight:500;color:var(--fg-mid)}.nl a:hover{color:var(--fg);text-decoration:none}
-.hero{padding:100px 0 90px;border-bottom:1px solid var(--border)}
-.ht{display:inline-block;font-family:var(--display);font-size:.78rem;font-weight:600;color:var(--accent);background:var(--accent-glow);padding:6px 14px;border-radius:4px;margin-bottom:28px}
-.hero h1{font-family:var(--display);font-size:clamp(2.8rem,6vw,4.2rem);font-weight:700;line-height:1.08;letter-spacing:-.035em;max-width:750px;margin-bottom:28px}
-.hero h1 em{font-family:var(--body);font-style:italic;font-weight:400}
-.hs{font-size:1.15rem;color:var(--fg-mid);max-width:560px;line-height:1.65;margin-bottom:40px}
-.hc{display:flex;gap:28px;flex-wrap:wrap}.hc a{font-family:var(--display);font-size:.84rem;font-weight:500;color:var(--fg-dim);transition:color .2s}.hc a:hover{color:var(--fg);text-decoration:none}
-section{padding:80px 0}section+section{border-top:1px solid var(--border)}
-.sh{margin-bottom:56px}.sl{font-family:var(--display);font-size:.72rem;font-weight:600;color:var(--fg-dim);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
-.st{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;letter-spacing:-.03em;line-height:1.15}
-.pb{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:28px;background:var(--bg-card)}
-.pc{padding:40px;display:flex;flex-direction:column}.pe{background:var(--bg-ev);padding:40px;display:flex;flex-direction:column;gap:16px;border-left:1px solid var(--border)}
-.pt{font-family:var(--display);font-size:.72rem;font-weight:600;color:var(--accent);margin-bottom:8px}
-.pn{font-family:var(--display);font-size:1.55rem;font-weight:700;letter-spacing:-.02em;margin-bottom:14px;line-height:1.2}
-.pd{font-size:1rem;color:var(--fg-mid);line-height:1.65;flex-grow:1}
-.pl{margin-top:20px;font-family:var(--display);font-size:.84rem;font-weight:600}
-.el{font-family:var(--display);font-size:.68rem;font-weight:600;color:var(--fg-dim);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
-.mr{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border)}.mr:last-child{border-bottom:none}
-.ml{font-family:var(--display);font-size:.82rem;color:var(--fg-mid)}.mv{font-family:var(--display);font-size:.88rem;font-weight:700;color:var(--fg)}
-.mv.h{color:var(--accent)}.mv.g{color:var(--green)}
-.bn{text-align:center;padding:24px 0}.bn .n{font-family:var(--display);font-size:3rem;font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--accent)}
-.bn .nl2{font-family:var(--display);font-size:.78rem;color:var(--fg-dim);margin-top:6px}
-.ib{background:var(--accent-glow);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 6px 6px 0;margin-top:auto}
-.ib p{font-family:var(--display);font-size:.82rem;color:var(--fg);line-height:1.5}
-.ib.gb{background:var(--green-dim);border-left-color:var(--green)}
-.sy{font-family:var(--display);font-size:.88rem;font-weight:600;color:var(--fg-mid);margin-bottom:20px;margin-top:20px}
-.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.sc{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:24px;transition:border-color .2s;text-decoration:none;color:inherit;display:block}
-.sc:hover{border-color:var(--fg-dim);text-decoration:none}
-.sc h4{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em;color:var(--fg)}
-.sc p{font-size:.88rem;color:var(--fg-mid);line-height:1.5}
-.ar{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.ai{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:32px 28px}
-.an{font-family:var(--display);font-size:3.5rem;font-weight:700;color:var(--border);line-height:1;margin-bottom:16px}
-.ai h3{font-family:var(--display);font-size:1rem;font-weight:700;margin-bottom:10px}.ai p{font-size:.9rem;color:var(--fg-mid);line-height:1.55}
-.eb{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--border)}.eb:last-child{border-bottom:none}
-.ew{font-family:var(--display);font-size:.82rem;color:var(--fg-dim);padding-top:4px}
-.ex h3{font-family:var(--display);font-size:1.05rem;font-weight:700;margin-bottom:2px}
-.ex .er{font-size:.9rem;color:var(--fg-mid);font-style:italic;margin-bottom:10px}
-.ex p{font-size:.92rem;color:var(--fg-mid);line-height:1.6}
-footer{border-top:1px solid var(--border);padding:48px 0 60px}
-.fr{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px}
-.fr p{font-size:.85rem;color:var(--fg-dim);margin-top:4px}
-.fl{display:flex;gap:24px}.fl a{font-family:var(--display);font-size:.84rem;font-weight:500;color:var(--fg-mid)}
-@media(max-width:740px){.pb{grid-template-columns:1fr}.pe{border-left:none;border-top:1px solid var(--border)}.ar,.sg{grid-template-columns:1fr}.eb{grid-template-columns:1fr;gap:4px}.hero{padding:60px 0 50px}section{padding:50px 0}.pc,.pe{padding:28px}}
+
+/* ── HERO ── */
+.hero{text-align:center;padding:80px 24px 60px;max-width:720px;margin:0 auto}
+.hero-avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--teal));margin:0 auto 24px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:2.4rem;color:var(--bg);font-weight:700}
+.hero-hello{font-size:.9rem;color:var(--fg-mid);margin-bottom:8px}
+.hero h1{font-family:var(--display);font-size:clamp(2.4rem,5vw,3.4rem);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.hero-sub{font-size:1.1rem;color:var(--accent);font-weight:600;margin-bottom:20px}
+.hero-desc{font-size:1rem;color:var(--fg-mid);max-width:560px;margin:0 auto 32px;line-height:1.7}
+.hero-btns{display:flex;gap:14px;justify-content:center;margin-bottom:28px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:var(--bg);padding:12px 28px;border-radius:8px;font-weight:600;font-size:.9rem;transition:opacity .2s}
+.btn-primary:hover{opacity:.85;text-decoration:none}
+.btn-outline{border:1px solid var(--card-border);color:var(--fg);padding:12px 28px;border-radius:8px;font-weight:600;font-size:.9rem;transition:border-color .2s}
+.btn-outline:hover{border-color:var(--fg-mid);text-decoration:none}
+.hero-social{display:flex;gap:16px;justify-content:center}
+.hero-social a{width:40px;height:40px;border-radius:50%;border:1px solid var(--card-border);display:flex;align-items:center;justify-content:center;color:var(--fg-mid);font-size:.8rem;transition:border-color .2s,color .2s}
+.hero-social a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+/* ── STATS ── */
+.stats{display:flex;gap:16px;justify-content:center;padding:0 24px 60px;max-width:640px;margin:0 auto}
+.stat{flex:1;background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:24px 16px;text-align:center}
+.stat-num{font-size:2rem;font-weight:700;color:var(--teal);letter-spacing:-.03em}
+.stat-label{font-size:.75rem;color:var(--fg-dim);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+/* ── SECTIONS ── */
+section{padding:60px 24px;max-width:960px;margin:0 auto}
+.sec-tag{text-align:center;margin-bottom:12px}
+.sec-tag span{font-size:.72rem;font-weight:600;color:var(--accent);background:var(--accent-glow);padding:6px 16px;border-radius:20px;text-transform:uppercase;letter-spacing:.08em}
+.sec-title{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:700;text-align:center;margin-bottom:12px}
+.sec-sub{text-align:center;color:var(--fg-mid);font-size:.95rem;margin-bottom:48px}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+.about-bio{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:36px;font-size:.95rem;color:var(--fg-mid);line-height:1.75}
+.about-facts{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:36px}
+.about-facts h3{font-size:1rem;font-weight:700;margin-bottom:20px}
+.fact{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px}
+.fact-icon{width:36px;height:36px;border-radius:8px;background:var(--teal-glow);border:1px solid rgba(88,166,176,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;color:var(--teal)}
+.fact-text .fl{font-size:.75rem;color:var(--fg-dim)}.fact-text .fv{font-size:.88rem;font-weight:500}
+
+/* ── SKILLS GRID ── */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.skill-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:32px}
+.skill-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.skill-card p{font-size:.88rem;color:var(--fg-mid);line-height:1.6;margin-bottom:16px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:.78rem;padding:6px 14px;border-radius:20px;border:1px solid var(--card-border);color:var(--fg-mid);background:transparent;transition:border-color .2s,color .2s}
+.pill.hl{border-color:var(--accent);color:var(--accent)}
+
+/* ── PROJECTS ── */
+.project{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:36px;margin-bottom:20px}
+.project-tag{font-size:.72rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.project h3{font-size:1.3rem;font-weight:700;margin-bottom:12px}
+.project p{font-size:.92rem;color:var(--fg-mid);line-height:1.7;margin-bottom:16px}
+.project-metrics{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px}
+.pm{display:flex;flex-direction:column}
+.pm-val{font-size:1.1rem;font-weight:700;color:var(--accent)}
+.pm-label{font-size:.72rem;color:var(--fg-dim);text-transform:uppercase;letter-spacing:.06em}
+.project-insight{background:var(--accent-glow);border-left:3px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin-top:8px}
+.project-insight p{color:var(--fg);font-size:.85rem;margin:0;font-weight:500}
+.project a.pl{font-size:.85rem;font-weight:600;display:inline-block;margin-top:12px}
+
+/* ── EXPERIENCE ── */
+.exp{border-left:2px solid var(--card-border);margin-left:20px;padding-left:32px;position:relative;padding-bottom:36px}
+.exp:last-child{padding-bottom:0}
+.exp::before{content:'';position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.exp-when{font-size:.8rem;color:var(--fg-dim);margin-bottom:4px}
+.exp h3{font-size:1rem;font-weight:700;margin-bottom:2px}
+.exp-role{font-size:.88rem;color:var(--teal);font-weight:500;margin-bottom:8px}
+.exp p{font-size:.88rem;color:var(--fg-mid);line-height:1.6}
+
+/* ── EDUCATION ── */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.edu{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:28px}
+.edu h3{font-size:1rem;font-weight:700;margin-bottom:4px}
+.edu-deg{font-size:.88rem;color:var(--teal);margin-bottom:4px}
+.edu-when{font-size:.8rem;color:var(--fg-dim)}
+
+/* ── FOOTER ── */
+footer{text-align:center;padding:60px 24px 40px;border-top:1px solid var(--card-border);margin-top:40px}
+footer h2{font-family:var(--display);font-size:1.6rem;margin-bottom:8px}
+footer p{color:var(--fg-mid);font-size:.9rem;margin-bottom:24px}
+.foot-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.foot-links a{font-size:.85rem;font-weight:500;color:var(--fg-mid)}
+.foot-copy{margin-top:40px;font-size:.75rem;color:var(--fg-dim)}
+
+@media(max-width:700px){
+  .about-grid,.skills-grid,.edu-grid{grid-template-columns:1fr}
+  .stats{flex-direction:row;gap:10px}
+  .stat{padding:16px 10px}
+  .project-metrics{gap:16px}
+  .hero{padding:50px 20px 40px}
+  section{padding:40px 20px}
+}
 </style>
 </head>
 <body>
-<nav><div class="w"><span class="nn">Udeesha Bansal</span><div class="nl"><a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="mailto:udeesha.v.bansal@gmail.com">Contact</a></div></div></nav>
 
-<header class="hero"><div class="w">
-<div class="ht">Open to strategy, consulting & analytical roles</div>
-<h1>Research the problem. Build the framework. <em>Deliver the answer.</em></h1>
-<p class="hs">I work across market entry strategy, commercial due diligence, operational transformation and AI-powered analytics. From 418-company screens to system implementations, I do the work that turns ambiguity into decisions.</p>
-<div class="hc"><a href="mailto:udeesha.v.bansal@gmail.com">udeesha.v.bansal@gmail.com</a><a href="tel:+6585356368">+65 8535 6368</a><a href="https://www.linkedin.com/in/udeesha-bansal-4a01b01b4/" target="_blank">LinkedIn</a><a href="https://github.com/udeeshabansal" target="_blank">GitHub</a></div>
-</div></header>
+<header class="hero">
+  <div class="hero-avatar">UB</div>
+  <div class="hero-hello">Hello, I'm</div>
+  <h1>Udeesha Bansal</h1>
+  <div class="hero-sub">Strategy & Operations | SMU Singapore</div>
+  <p class="hero-desc">I work across market entry strategy, commercial due diligence, operational transformation and AI-powered analytics. From 418-company screens to system implementations, I turn ambiguity into decisions leadership can act on.</p>
+  <div class="hero-btns">
+    <a href="mailto:udeesha.v.bansal@gmail.com" class="btn-primary">Get In Touch</a>
+    <a href="#projects" class="btn-outline">View My Work</a>
+  </div>
+  <div class="hero-social">
+    <a href="mailto:udeesha.v.bansal@gmail.com" title="Email">@</a>
+    <a href="https://www.linkedin.com/in/udeesha-bansal-4a01b01b4/" target="_blank" title="LinkedIn">in</a>
+    <a href="https://github.com/udeeshabansal" target="_blank" title="GitHub">GH</a>
+  </div>
+</header>
 
-<section id="work"><div class="w">
-<div class="sh"><div class="sl">Selected work</div><h2 class="st">Four problems, four frameworks</h2></div>
-
-<div class="pb"><div class="pc">
-<div class="pt">Market Entry Strategy & Commercial Due Diligence</div>
-<h3 class="pn">Project Causeway</h3>
-<p class="pd">A Japanese M&E corporation wanted to enter data-centre services in Singapore and Malaysia. I mapped regulatory constraints and licensing barriers in both markets, screened 418 contractors through four filters, and challenged the board's assumption that the largest target is the best. Recommended a two-country acquisition platform structured around ownership caps and regulatory logic.</p>
-</div><div class="pe">
-<div class="el">The evidence</div>
-<div class="bn"><div class="n">418</div><div class="nl2">contractors screened across two markets</div></div>
-<div class="mr"><span class="ml">Targets shortlisted</span><span class="mv">4 of 418</span></div>
-<div class="mr"><span class="ml">Malaysia stake</span><span class="mv">30% minority</span></div>
-<div class="mr"><span class="ml">Singapore stake</span><span class="mv">65% control</span></div>
-<div class="mr"><span class="ml">Deal size</span><span class="mv h">US$68-99M</span></div>
-<div class="ib"><p>The board's "largest target" rule would have selected the weakest candidate. The screening proved it.</p></div>
-</div></div>
-
-<div class="pb"><div class="pc">
-<div class="pt">AI-Powered Strategic Analytics</div>
-<h3 class="pn">The Quiet Signal Engine</h3>
-<p class="pd">Built an NLP tool that tracks how management language shifts across earnings calls, surfacing changes in confidence, strategic priorities and guidance framing that conventional analysis misses. Four independent detectors run per metric per quarter. A convergence engine finds where multiple channels agree.</p>
-<a class="pl" href="https://github.com/udeeshabansal/earnings-signal-engine" target="_blank">View code and research memo &rarr;</a>
-</div><div class="pe">
-<div class="el">Backtested across 13 quarters of Novo Nordisk</div>
-<div class="bn"><div class="n" style="color:var(--green)">1-2 Qs</div><div class="nl2">early warning before every guidance revision</div></div>
-<div class="mr"><span class="ml">Quarters analysed</span><span class="mv">13</span></div>
-<div class="mr"><span class="ml">Detectors</span><span class="mv">4 independent channels</span></div>
-<div class="mr"><span class="ml">Stock from high</span><span class="mv h">-31%</span></div>
-<div class="mr"><span class="ml">Consensus</span><span class="mv">Hold</span></div>
-<div class="ib gb"><p>The board replaced the CEO citing decline "since mid-2024." The engine's strongest signal fired eleven months earlier.</p></div>
-</div></div>
-
-<div class="pb"><div class="pc">
-<div class="pt">Strategy Development & Operational Transformation</div>
-<h3 class="pn">Tsao Family Foundation</h3>
-<p class="pd">Two parallel workstreams at a philanthropic foundation. First: developed a humanitarian funding strategy that shifted the organisation from reactive disaster response to a planned approach with a structured shortlist. Recommendations advanced to the management committee. Second: leading a CRM and grant management system implementation end-to-end.</p>
-</div><div class="pe">
-<div class="el">Strategy workstream</div>
-<div class="mr"><span class="ml">Countries researched</span><span class="mv">27</span></div>
-<div class="mr"><span class="ml">Organisations screened</span><span class="mv">61</span></div>
-<div class="mr"><span class="ml">Priority pillars</span><span class="mv">8</span></div>
-<div class="mr"><span class="ml">Outcome</span><span class="mv g">Advanced to mgmt committee</span></div>
-<div class="el" style="margin-top:20px">Transformation workstream</div>
-<div class="mr"><span class="ml">Process stages mapped</span><span class="mv">7</span></div>
-<div class="mr"><span class="ml">Users onboarded</span><span class="mv">6 across 3 tiers</span></div>
-<div class="mr"><span class="ml">Status</span><span class="mv">In progress</span></div>
-</div></div>
-
-<div class="pb"><div class="pc">
-<div class="pt">Strategic Growth Assessment</div>
-<h3 class="pn">Seatrium Expansion</h3>
-<p class="pd">Seatrium (SGX-listed offshore and marine) needed to move beyond project-based revenue. Evaluated strategic expansion options and recommended a partnership-first entry into offshore wind lifecycle services via IWS (Oslo) with an option on control, structured around operational fit and commercial logic.</p>
-</div><div class="pe">
-<div class="el">The recommendation</div>
-<div class="mr"><span class="ml">Client</span><span class="mv">Seatrium (SGX)</span></div>
-<div class="mr"><span class="ml">Target</span><span class="mv">IWS, Oslo</span></div>
-<div class="mr"><span class="ml">Entry model</span><span class="mv g">Partnership-first</span></div>
-<div class="mr"><span class="ml">Optionality</span><span class="mv">Option on control</span></div>
-<div class="ib"><p>Structured around lifecycle service capabilities and commercial fit, not financial engineering.</p></div>
-</div></div>
-
-<div class="sy">Financial analysis and interactive models</div>
-<div class="sg">
-<a href="https://sbux-simulator.vercel.app/" target="_blank" class="sc"><div class="pt">Valuation</div><h4>Starbucks</h4><p>DCF with 10,000 Monte Carlo simulations. Interactive scenario explorer.</p></a>
-<div class="sc"><div class="pt">Supply Chain & FX Risk</div><h4>On Holding</h4><p>Tariff and FX exposure modelling with supply-chain alternatives and margin scenarios.</p></div>
-<div class="sc"><div class="pt">Market Entry & Fintech</div><h4>HALA Holding</h4><p>TAM sizing, competitive moat, revenue model and exit thesis for a Saudi fintech.</p></div>
-<div class="sc"><div class="pt">Financial Health</div><h4>CVS Health</h4><p>Piotrowski F-Score diagnostic, peer benchmarking and margin decomposition.</p></div>
-<div class="sc"><div class="pt">Corporate Finance</div><h4>Pfizer</h4><p>Integrated 3-statement model, DCF, DuPont analysis and scenario modelling.</p></div>
-<div class="sc"><div class="pt">Corporate Finance</div><h4>Reliance Industries</h4><p>Segment-level revenue modelling, DCF valuation and sensitivity analysis.</p></div>
+<div class="stats">
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Strategy Projects</div></div>
+  <div class="stat"><div class="stat-num">418</div><div class="stat-label">Targets Screened</div></div>
+  <div class="stat"><div class="stat-num">27</div><div class="stat-label">Countries Researched</div></div>
 </div>
-</div></section>
 
-<section id="approach"><div class="w">
-<div class="sh"><div class="sl">How I work</div><h2 class="st">Beyond the model</h2></div>
-<div class="ar">
-<div class="ai"><div class="an">1</div><h3>Find the real question</h3><p>Identify the decision, the constraints, and which evidence actually matters. Most problems arrive framed too broadly or too narrowly.</p></div>
-<div class="ai"><div class="an">2</div><h3>Stress-test the story</h3><p>Build scenarios and distinguish strong evidence from uncertain assumptions. The goal is to know where the thesis breaks, not to prove it.</p></div>
-<div class="ai"><div class="an">3</div><h3>Make it useful</h3><p>Deliver a recommendation, model, process or system others can act on. Analysis that stays in a spreadsheet is unfinished work.</p></div>
-</div>
-</div></section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-tag"><span>About Me</span></div>
+  <h2 class="sec-title">About Me</h2>
+  <div class="sec-sub">Background, approach and what I care about.</div>
+  <div class="about-grid">
+    <div class="about-bio">
+      I'm an MSc Management (Finance) candidate at Singapore Management University, working as a Finance & Operations Intern at the Tsao Family Foundation. My work sits at the intersection of strategy and execution: I've built a humanitarian funding strategy from scratch across 27 countries, led a CRM and grant management system implementation, and independently produced a commercial due diligence case that screened 418 contractors to recommend a staged market entry. I also build tools — an NLP engine that reads earnings-call language to detect strategic shifts before they hit the numbers. I'm drawn to problems where the question isn't clear yet, and where the answer has to be something someone can actually use.
+    </div>
+    <div class="about-facts">
+      <h3>Quick Facts</h3>
+      <div class="fact">
+        <div class="fact-icon">@</div>
+        <div class="fact-text"><div class="fl">Email</div><div class="fv">udeesha.v.bansal@gmail.com</div></div>
+      </div>
+      <div class="fact">
+        <div class="fact-icon">+</div>
+        <div class="fact-text"><div class="fl">Phone</div><div class="fv">+65 8535 6368</div></div>
+      </div>
+      <div class="fact">
+        <div class="fact-icon">◎</div>
+        <div class="fact-text"><div class="fl">Location</div><div class="fv">Singapore</div></div>
+      </div>
+      <div class="fact">
+        <div class="fact-icon">↗</div>
+        <div class="fact-text"><div class="fl">Status</div><div class="fv">Open to opportunities</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section id="experience"><div class="w">
-<div class="sh"><div class="sl">Experience & education</div><h2 class="st">Where I have worked</h2></div>
-<div class="eb"><div class="ew">Aug 2026 - Present</div><div class="ex"><h3>Tsao Family Foundation, Singapore</h3><div class="er">Finance & Operations Intern</div><p>Developed a humanitarian funding strategy across 27 countries and 61 organisations. Leading a CRM and grant management system implementation end-to-end. Built scenario-based impact tools for resource prioritisation. Recommendations advanced to the management committee.</p></div></div>
-<div class="eb"><div class="ew">Aug 2023 - Jan 2024</div><div class="ex"><h3>Agarwal Manoj Nidhi & Associates, Delhi</h3><div class="er">Audit Intern</div><p>Evaluated business processes and internal controls across five client engagements, identifying risk areas and documenting findings for management review.</p></div></div>
-<div class="eb"><div class="ew">Apr 2022 - Mar 2023</div><div class="ex"><h3>ACHS & Co., Delhi</h3><div class="er">Taxation & Compliance Intern</div><p>Managed concurrent compliance delivery for 20+ corporate clients, coordinating cross-functional information flows to meet regulatory deadlines.</p></div></div>
-<div class="eb" style="border-bottom:1px solid var(--border)"><div class="ew">Aug 2025 - Nov 2026</div><div class="ex"><h3>Singapore Management University</h3><div class="er">MSc Management (Finance specialisation)</div><p>Recipient, Impact on Asia Scholarship</p></div></div>
-<div class="eb"><div class="ew">Jul 2022 - Jul 2025</div><div class="ex"><h3>Indira Gandhi National Open University</h3><div class="er">Bachelor of Commerce</div></div></div>
-</div></section>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-tag"><span>Skills & Tools</span></div>
+  <h2 class="sec-title">Skills & Tools</h2>
+  <div class="sec-sub">The strengths and tools I bring to my work.</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Problem Types</h3>
+      <p>The kinds of work I keep coming back to, where research meets structured decision-making.</p>
+      <div class="pills">
+        <span class="pill">Market Entry Strategy</span>
+        <span class="pill hl">Commercial Due Diligence</span>
+        <span class="pill">Operational Transformation</span>
+        <span class="pill">System Implementation</span>
+        <span class="pill">Humanitarian Strategy</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>Frameworks I Use</h3>
+      <p>Not borrowed methodology breadth, but the tools that show up in nearly every project I work on.</p>
+      <div class="pills">
+        <span class="pill hl">Scenario Planning</span>
+        <span class="pill">Sensitivity Analysis</span>
+        <span class="pill">Stakeholder Mapping</span>
+        <span class="pill">Process Redesign</span>
+        <span class="pill">NLP Signal Detection</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>Industries</h3>
+      <p>Sectors where my project work reflects real depth, not surface-level exposure.</p>
+      <div class="pills">
+        <span class="pill">Philanthropy & Impact</span>
+        <span class="pill hl">Data Centres & M&E</span>
+        <span class="pill">Offshore & Marine</span>
+        <span class="pill">Healthcare & Pharma</span>
+        <span class="pill">Fintech</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <h3>How I Work</h3>
+      <p>The operating practices that turn a four-week project into a clear recommendation.</p>
+      <div class="pills">
+        <span class="pill">Structured Screening</span>
+        <span class="pill hl">Slide-Driven Synthesis</span>
+        <span class="pill">Quantitative Analysis (SQL, Excel)</span>
+        <span class="pill">Vendor Coordination</span>
+        <span class="pill">Training Design</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer><div class="w"><div class="fr"><div><span class="nn">Udeesha Bansal</span><p>Exploring opportunities across strategy, consulting, analytics and transformation.</p></div><div class="fl"><a href="mailto:udeesha.v.bansal@gmail.com">Email</a><a href="https://www.linkedin.com/in/udeesha-bansal-4a01b01b4/" target="_blank">LinkedIn</a><a href="https://github.com/udeeshabansal" target="_blank">GitHub</a></div></div></div></footer>
-</body></html>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-tag"><span>Selected Work</span></div>
+  <h2 class="sec-title">Projects</h2>
+  <div class="sec-sub">Four problems, four frameworks, four answers.</div>
+
+  <div class="project">
+    <div class="project-tag">Market Entry Strategy & Commercial Due Diligence</div>
+    <h3>Project Causeway</h3>
+    <p>A Japanese M&E corporation wanted to enter data-centre services in Singapore and Malaysia. I mapped regulatory constraints and licensing barriers in both markets, screened 418 contractors through four filters, and challenged the board's assumption that the largest target is the best. Recommended a two-country acquisition platform structured around ownership caps and regulatory logic.</p>
+    <div class="project-metrics">
+      <div class="pm"><span class="pm-val">418</span><span class="pm-label">Targets screened</span></div>
+      <div class="pm"><span class="pm-val">4</span><span class="pm-label">Shortlisted</span></div>
+      <div class="pm"><span class="pm-val">US$68-99M</span><span class="pm-label">Deal size</span></div>
+      <div class="pm"><span class="pm-val">2</span><span class="pm-label">Countries</span></div>
+    </div>
+    <div class="project-insight"><p>The board's "largest target" rule would have selected the weakest candidate. The screening proved it.</p></div>
+  </div>
+
+  <div class="project">
+    <div class="project-tag">AI-Powered Strategic Analytics</div>
+    <h3>The Quiet Signal Engine</h3>
+    <p>Built an NLP tool that tracks how management language shifts across earnings calls, surfacing changes in confidence, strategic priorities and guidance framing that conventional analysis misses. Four independent detectors run per metric per quarter. A convergence engine finds where multiple channels agree.</p>
+    <div class="project-metrics">
+      <div class="pm"><span class="pm-val">13</span><span class="pm-label">Quarters analysed</span></div>
+      <div class="pm"><span class="pm-val">4</span><span class="pm-label">Detector channels</span></div>
+      <div class="pm"><span class="pm-val">1-2 Qs</span><span class="pm-label">Early warning</span></div>
+      <div class="pm"><span class="pm-val">-31%</span><span class="pm-label">Stock from high</span></div>
+    </div>
+    <div class="project-insight"><p>The board replaced the CEO citing decline "since mid-2024." The engine's strongest signal fired eleven months earlier, reading nothing but transcripts.</p></div>
+    <a class="pl" href="https://github.com/udeeshabansal/earnings-signal-engine" target="_blank">View code and research memo &rarr;</a>
+  </div>
+
+  <div class="project">
+    <div class="project-tag">Strategy Development & Operational Transformation</div>
+    <h3>Tsao Family Foundation</h3>
+    <p>Two parallel workstreams at a philanthropic foundation. First: developed a humanitarian funding strategy by researching 27 countries and screening 61 organisations against eight priority pillars, shifting the foundation from reactive disaster response to a planned approach. Recommendations advanced to the management committee. Second: leading a CRM and grant management system implementation end-to-end.</p>
+    <div class="project-metrics">
+      <div class="pm"><span class="pm-val">27</span><span class="pm-label">Countries</span></div>
+      <div class="pm"><span class="pm-val">61</span><span class="pm-label">Organisations</span></div>
+      <div class="pm"><span class="pm-val">7</span><span class="pm-label">Process stages mapped</span></div>
+      <div class="pm"><span class="pm-val">6</span><span class="pm-label">Users onboarded</span></div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-tag">Strategic Growth Assessment</div>
+    <h3>Seatrium Expansion</h3>
+    <p>Seatrium (SGX-listed offshore and marine) needed to move beyond project-based revenue. Evaluated strategic expansion options and recommended a partnership-first entry into offshore wind lifecycle services via IWS (Oslo) with an option on control, structured around operational fit and commercial logic.</p>
+    <div class="project-metrics">
+      <div class="pm"><span class="pm-val">Seatrium</span><span class="pm-label">Client (SGX)</span></div>
+      <div class="pm"><span class="pm-val">IWS Oslo</span><span class="pm-label">Target</span></div>
+      <div class="pm"><span class="pm-val">Partnership</span><span class="pm-label">Entry model</span></div>
+    </div>
+    <div class="project-insight"><p>Structured around lifecycle service capabilities and commercial fit, not financial engineering.</p></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-tag"><span>Experience</span></div>
+  <h2 class="sec-title">Experience</h2>
+  <div class="sec-sub">Hands-on work across strategy, transformation, audit and compliance.</div>
+
+  <div class="exp">
+    <div class="exp-when">Aug 2026 - Present</div>
+    <h3>Tsao Family Foundation, Singapore</h3>
+    <div class="exp-role">Finance & Operations Intern</div>
+    <p>Developed a humanitarian funding strategy across 27 countries and 61 organisations. Leading a CRM and grant management system implementation end-to-end. Conducted rapid due diligence on three organisations for emergency flood-response funding. Recommendations advanced to the management committee.</p>
+  </div>
+
+  <div class="exp">
+    <div class="exp-when">Aug 2023 - Jan 2024</div>
+    <h3>Agarwal Manoj Nidhi & Associates, Delhi</h3>
+    <div class="exp-role">Audit Intern</div>
+    <p>Evaluated business processes and internal controls across five client engagements, identifying risk areas and documenting findings for management review.</p>
+  </div>
+
+  <div class="exp">
+    <div class="exp-when">Apr 2022 - Mar 2023</div>
+    <h3>ACHS & Co., Delhi</h3>
+    <div class="exp-role">Taxation & Compliance Intern</div>
+    <p>Managed concurrent compliance delivery for 20+ corporate clients, coordinating cross-functional information flows to meet regulatory deadlines.</p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="sec-tag"><span>Education</span></div>
+  <h2 class="sec-title">Education</h2>
+  <div class="sec-sub"></div>
+  <div class="edu-grid">
+    <div class="edu">
+      <h3>Singapore Management University</h3>
+      <div class="edu-deg">MSc Management (Finance specialisation)</div>
+      <div class="edu-when">Aug 2025 - Nov 2026 | Impact on Asia Scholarship</div>
+    </div>
+    <div class="edu">
+      <h3>Indira Gandhi National Open University</h3>
+      <div class="edu-deg">Bachelor of Commerce</div>
+      <div class="edu-when">Jul 2022 - Jul 2025</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Let's talk.</h2>
+  <p>Exploring opportunities across strategy, consulting, analytics and transformation.</p>
+  <div class="foot-links">
+    <a href="mailto:udeesha.v.bansal@gmail.com">udeesha.v.bansal@gmail.com</a>
+    <a href="tel:+6585356368">+65 8535 6368</a>
+    <a href="https://www.linkedin.com/in/udeesha-bansal-4a01b01b4/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/udeeshabansal" target="_blank">GitHub</a>
+  </div>
+  <div class="foot-copy">&copy; 2026 Udeesha Bansal</div>
+</footer>
+
+</body>
+</html>
